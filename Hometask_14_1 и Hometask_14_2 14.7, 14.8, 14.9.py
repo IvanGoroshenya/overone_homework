@@ -15,9 +15,6 @@
 #         self. weight = weight
 #         self.name = name
 #         self.age = age
-#
-# if __name__ == '__main__':
-#     Dog = Dog(50, 25, 'Laki', 2)
 # def jump(self):
 #     return f'{self.name} jump'
 #
@@ -28,8 +25,12 @@
 #     return f'{self.name} bark'
 #
 # def obekt(Dog):
-#
 #     return (Dog.__dict__)
+# if __name__ == '__main__':
+#     Dog = Dog(50, 25, 'Laki', 2)
+#
+#
+#
 # print(obekt(Dog))
 # print(jump(Dog))
 # print(run(Dog))
@@ -52,15 +53,16 @@
 #         self.name = name
 #         self.age = age
 #
+#
+# def change_name (name):
+#     Dog.name = 'Tom'
+#     return Dog.name
+#
 # if __name__ == '__main__':
 #     Dog = Dog(50, 25, 'Laki', 2)
 #
-# def jange_name (name):
-#     name = input('введите новое имя  ')
-#     Dog.name = name
-#     return f'Имя собаки  {Dog.name}'
 #
-# print(jange_name(Dog))
+# print(change_name(Dog))
 
 
 # 14.7
@@ -77,6 +79,16 @@
 #     def hire(self):
 #         print(f'вахтерша нанята')
 #
+# class House1:
+#     def __init__(self, floor, windows, doors):
+#         super().__init__(floor)
+#         self.windows = windows
+#         self.doors = doors
+#
+#     def build(self):
+#         print(f'build')
+#
+#
 # if __name__ == '__main__':
 #     House = House(10)
 #     print(House.floor)
@@ -91,7 +103,7 @@
 
 
 # class Beauty_salon:
-#     def __init__(self,manicure, haircut):
+#     def __init__(self,manicure,haircut):
 #         self.manicure = manicure
 #         self.haircut = haircut
 #
@@ -100,9 +112,10 @@
 #     def haircut(self):
 #         pass
 #
-# class House_with_beauty_salon:
-#     def __init__(self,manicure, haircut):
-#         super().__init__(manicure, haircut)
+# class House_with_beauty_salon(Beauty_salon):
+#     pass
+
+
 
 
 # 14.9
@@ -114,22 +127,31 @@
 # Посмотрите работает ли салон в
 # 13 часов, а в 23?
 
-class Beauty_salon:
-
-
-    def __init__(self):
-
-        self.close_time = 9
-        self.opening_time = 18
-
-    def salon_opening_hours(self,time):
-        if self.close_time > time > self.opening_time:
-            print('салон открыт')
-
-
-salon = Beauty_salon()
-salon.salon_opening_hours(12)
-print()
+# class Beauty_salon:
+#
+#
+#     def __init__(self):
+#
+#         self.close_time = 18
+#         self.opening_time = 9
+#
+#     def salon_opening_hours(self,time):
+#         if self.close_time > time > self.opening_time:
+#             print('салон открыт')
+#         else:
+#             print('салон закрыт')
+#
+#     def salon_opening_hours1(self,time1):
+#         if self.close_time > time1 > self.opening_time:
+#             print('салон открыт')
+#         else:
+#             print('салон закрыт')
+#
+#
+# salon = Beauty_salon()
+# salon.salon_opening_hours(12)
+# salon.salon_opening_hours1(23)
+# print()
 
 
 
